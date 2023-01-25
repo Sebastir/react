@@ -1,0 +1,50 @@
+<h1>Important</h1>
+<h3>createElement is different: it can only be called on the document object.</h3>
+<h3>In order for a DOM node to be visible to the user, it needs to be within the <body> tag. </h3>
+
+<h1>Methods</h1>
+  <h3>Grabbing using QuerySelector</h3>
+  <!--<p>
+  const enabledButton = document.querySelector('button:not(:disabled)');
+
+const thirdNavLink =  document.querySelector('.nav-link:nth-of-type(3)'); </p>
+-->
+<h3>Skipping document, grabbing from other places</h3>
+<!--
+ Grab the header
+  const header = document.querySelector('#header');
+
+ Find the first `<a>` tag inside the header
+  const firstLink = header.querySelector('a');
+-->
+
+<h3>Multiple Selection -- QuerySelectorALL</h3>
+
+<h3>Toggle Class</h3>
+
+<!--
+  const node = document.querySelector('#user-andrew');
+  node.setAttribute('class', 'online');
+-->
+
+<h3>Changing InnerText</h3>
+
+<!--
+
+  const node = document.querySelector('#user-andrew');
+
+node.innerText = 'Andrew (online)';
+-->
+
+<h3>Creating and appending Elements, with its properties and content</h3>
+
+<!--
+
+const element = document.createElement('div');
+
+element.setAttribute('style', 'color: red;');
+element.innerText = "Hello world!";
+
+const body = document.querySelector('body');
+body.appendChild(element);
+-->

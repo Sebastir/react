@@ -1,0 +1,170 @@
+get elements with QuerySelector
+1. const body = document.querySelector('body');
+2. const enabledButton =
+  document.querySelector('button:not(:disabled)');
+3. const thirdNavLink =
+  document.querySelector('.nav-link:nth-of-type(3)');
+
+Alterantive Way to use QuerySelector
+
+1.   const header = document.querySelector('#header');
+1.1. const firstLink = header.querySelector('a');
+
+
+Change Text within elements
+node.innerText = 'Andrew (online)';
+
+1. Create DOM Elements
+const element = document.createElement('div');
+2. Provide Style and Text
+element.setAttribute('style', 'color: red;');
+element.innerText = "Hello world!";
+3. Display new element
+const body = document.querySelector('body');
+body.appendChild(element);
+
+Delete Elements
+const elem = document.querySelector('#some-element');
+elem.remove();
+
+Expression vs Statements
+Expressions produces value
+Statements are instructions  to do a particular thing
+
+
+Ways to Create Functions
+
+
+function exclaim(string) {
+  return string + '!';export function doubleNum(num) {
+  return num * 2;
+}
+}
+
+Arrow Functions.Import Statement
+import { significantNum, doubleNum } from './data';
+import { Wrapper as HeaderWrapper } from './Header';
+const exclaim = string => string + '!';
+
+
+
+Export Statement
+export const significantNum = 5;
+export { significantNum }; // without expression
+export function doubleNum(num) {
+  return num * 2;
+}
+
+Import Statement
+import { significantNum, doubleNum } from './data';
+import { Wrapper as FooterWrapper } from './Footer';
+
+Array iteration methods
+
+1. forEach --> used when we want to perform an action on EVERY item in an array (it modifies the original)
+
+const pizzaToppings = [ 'cheese','avocado','halibut','custard',];
+pizzaToppings.forEach((topping, index) => {
+  console.log(index, topping);
+});
+
+2. Map --> same that forEach but it creates a new array
+
+const people = [{ name: 'Aisha', grade: 89 }, { name: 'Bruno', grade: 55 },{ name: 'Carlos', grade: 68 }];
+
+const numberedNames = people.map((person, index) => {
+  return `${index}-${person.name}`;
+});
+
+console.log(numberedNames);
+/*
+  ['0-Aisha', '1-Bruno', '2-Carlos', '3-Dacian', '4-Esther']
+*/
+
+
+3. Filter --> check a conditions and filter those FALSE. Creates a new Array
+
+const students = [{ name: 'Aisha', grade: 89 },{ name: 'Bruno', grade: 55 },{ name: 'Carlos', grade: 68 }]
+const studentsWhoPassed = students.filter(student => {
+  return student.grade >= 60;
+});
+
+console.log(studentsWhoPassed);
+/*
+  [
+    { name: 'Aisha', grade: 89 },
+    { name: 'Carlos', grade: 68 },
+  ]
+*/
+
+Falsy values
+false
+null
+undefined
+'' (empty string)
+0 (and related values, like 0.0 and -0)
+NaN
+
+Falsy values into false
+Boolean(4) equals !!(4)
+
+Logical Operator
+
+let src;
+
+if (userImageSrc) {
+  src = userImageSrc;
+} else if (teamImageSrc) {
+  src = teamImageSrc;
+} else {
+  src = defaultImageSrc;
+}
+equals to
+
+const userImageSrc = '/images/my-avatar.png';
+const teamImageSrc = null;
+const defaultImageSrc = '/images/cat.jpg';
+
+const src = userImageSrc || teamImageSrc || defaultImageSrc;
+
+Example with &&
+
+const numOfChildren = 4;
+const parkingHasBeenValidated = true;
+const signatureOnWaiver = 'Becky Chambers';
+
+const admissionTicket =
+  numOfChildren &&
+  parkingHasBeenValidated &&
+  signatureOnWaiver &&
+  generateTicket();
+
+  equals to nested IF
+
+  let admissionTicket;
+
+if (!numOfChildren) {
+  admissionTicket = numOfChildren;
+} else if (!parkingHasBeenValidated) {
+  admissionTicket = parkingHasBeenValidated;
+} else if (!signatureOnWaiver) {
+  admissionTicket = signatureOnWaiver;
+} else {
+  admissionTicket = generateTicket();
+}
+
+modifying a const variable
+1. when is an array
+const fruits = ["banana"]
+fruits.push("apple")
+console.log(fruits) --> ["banana", "apple"]
+
+2. When is an object
+const event = {
+  title: 'Change me!',
+  startsAt: '2023-05-29T16:00:00Z',
+  duration: 4,
+  confirmed: true,
+};
+
+event.title = "party new name"

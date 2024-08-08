@@ -5,7 +5,9 @@ components are defined as JavaScript functions.
 Are the main mechanism of reuse
  React components need to start with a Capital Letter
 
+The core idea with components is that each component is a bundle of markup (in JSX), logic (in JS), and styles (in CSS).
 Props:
+
 they allow us to pass data to our components
 
 Children

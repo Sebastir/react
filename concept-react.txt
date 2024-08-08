@@ -1,0 +1,25 @@
+
+components
+ is a bundle of markup, styles, and logic that controls everything about a specific part of the user interface.
+components are defined as JavaScript functions.
+Are the main mechanism of reuse
+ React components need to start with a Capital Letter
+
+Props:
+they allow us to pass data to our components
+
+Children
+  <div children="As an attribute 2nd priority">
+    Between the brackets has 1er priority
+  </div>
+
+React Application File Structure
+  Index.js
+  responsible for rendering our React application. (createRoot)
+  App
+  should show developers how the application is structured. (render method)
+
+Fragment
+<React.Fragment> </React.Fragment>
+A fragment is a special React component that does not produce a DOM node.
+<> This shorthand syntax might seem a bit more magical
